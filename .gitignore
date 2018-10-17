@@ -3,5 +3,13 @@ temp_vm/
 *.bak
 *.old
 *.swp
+*.pyc
+*.gz
+*.mgz
+*.tar
+*.tar.gz
+*.tgz
 .DS_Store
+credentials.json
+license
 *.DS_Store
