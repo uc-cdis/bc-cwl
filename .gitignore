@@ -1,0 +1,7 @@
+temp_vm/
+*~
+*.bak
+*.old
+*.swp
+.DS_Store
+*.DS_Store
