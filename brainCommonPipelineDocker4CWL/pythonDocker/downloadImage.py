@@ -61,21 +61,31 @@ def run_freesurfer_test(project_id, subject_id, outDir,mri_type = "T1-weighted")
     ''' Run FreeSurfer for ENIGMA cortical pipeline'''
 
     # Query data
+    #query_txt = """query {
+    #                  case(project_id: "%s", submitter_id: "%s"){
+    #                     imaging_mri_exams(imaging_subtype: "%s"){
+    #                        imaging_files(quick_search:"subT1"){
+    #                           id
+    #                           file_name
+    #                        }
+    #                     }
+    #                  }
+    #            }""" % (project_id, subject_id, mri_type)
+    
     query_txt = """query {
-                      case(project_id: "%s", submitter_id: "%s"){
-                         mri_exams(scan_type: "%s"){
-                            mri_images{
-                               id
+
+                            imaging_file(project_id: "%s",submitter_id: "%s"){
+                               object_id
                                file_name
                             }
-                         }
-                      }
-                }""" % (project_id, subject_id, mri_type)
+                         
+                      
+                }""" % (project_id, subject_id)
     
     data = query_api(query_txt)
     # Get file from S3
-    filename = data['data']["case"][0]['mri_exams'][0]['mri_images'][0]['file_name']
-    fileid =  data['data']["case"][0]['mri_exams'][0]['mri_images'][0]['id']
+    filename = data['data']['imaging_file'][0]['file_name']
+    fileid =  data['data']['imaging_file'][0]['object_id']
     
     #localpath = utils.get_file_from_s3(filename, project_id)
     localpath = outDir+'/' + project_id + '/' + filename
