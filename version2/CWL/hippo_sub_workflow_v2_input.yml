@@ -1,0 +1,7 @@
+c_file1:
+  class: File
+  path: credentials.json
+p_id1: mjff-training
+s_id1: [t1-image-01,t1-image-02]
+img_out_dir1: image_dir
+hippo_sub_volume_fileName: subfield_vol.txt
