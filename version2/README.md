@@ -7,17 +7,17 @@ calculations, and returns measures of the sufbields of the human hippocampal
 formations.
 
 ## Setup
-The pipeline pulls python and environment images from quay.io/cdis. Pipeline
-configuration and setup scripts are stored in the CWL directory, you can copy
-them to your working directory.
+The pipeline pulls python and environment images from quay.io/cdis. The
+pipeline configuration and setup scripts are stored in the CWL directory, you
+can copy them to your working directory.
 
 ### Dependencies
- - CWL
+ - cwltool
 
-### CWL setup
-The official CWL installation page can be found
+### CWL tool setup
+The official cwltool installation page can be found
 [here](https://github.com/common-workflow-language/cwltool/blob/master/README.rst).
-It is highly recommended to install CWL in the virtual environment as it is
+It is highly recommended to install cwtool in the virtual environment as it is
 indicated in the installation page.
 
 ### Setting up Credentials
@@ -34,12 +34,12 @@ it in your working directory.
 ### Configuration
 Parameters for the pipeline are controlled using
 `hippo_sub_workflow_v2_input.yml`:
-  - *c_file1* - the path to your credentials file.
-  - *p_id1* - project id in the [Brain Commons](https://data.braincommons.org/)
-  - *s_id1* - list of MRI scans from the project
-  - *img_out_dir1* - output directory for images
-  - *hippo_sub_volume_fileName* - the filename of the output file containing
-   volumes of the subfields of the hippocampal formations. 
+  - `c_file1` - the path to your credentials file
+  - `p_id1` - project id in the [Brain Commons](https://data.braincommons.org/)
+  - `s_id1` - list of MRI scans from the project
+  - `img_out_dir1` - output directory for images
+  - `hippo_sub_volume_fileName` - the filename of the output file containing
+   volumes of the subfields of the hippocampal formations 
  
 
 ### Start running Hippocampal subfield CWL pipeline
