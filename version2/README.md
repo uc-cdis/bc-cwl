@@ -3,7 +3,7 @@ Hippocampal subfield CWL pipeline
 
 Hippocampal subfield CWL pipeline pulls human MRI scans from the [Brain
 Commons](https://data.braincommons.org/), performs post-processing and
-calculations, and returns measures of the sufbields of the human hippocampal
+calculations, and returns measures of the subfields of the human hippocampal
 formations.
 
 ## Setup
@@ -17,7 +17,7 @@ can copy them to your working directory.
 ### CWL tool setup
 The official cwltool installation page can be found
 [here](https://github.com/common-workflow-language/cwltool/blob/master/README.rst).
-It is highly recommended to install cwtool in the virtual environment as it is
+It is highly recommended to install cwltool in the virtual environment as it is
 indicated in the installation page.
 
 ### Setting up Credentials
@@ -47,7 +47,7 @@ Parameters for the pipeline are controlled using
   2. Download credentials.json file to your working directory (see [Setting up
 Credentials](#Setting-up-Credentials))
 
-  3. Activate your virtual enviroment with CWL installed: 
+  3. Activate your virtual environment with CWL installed: 
   ``` 
   source your_venv_name/bin/activate
   ```
