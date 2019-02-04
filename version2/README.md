@@ -11,14 +11,21 @@ The pipeline pulls python and environment images from quay.io/cdis. The
 pipeline configuration and setup scripts are stored in the CWL directory, you
 can copy them to your working directory.
 
-### Dependencies
+## Dependencies
  - cwltool
+ - Docker
 
-### CWL tool setup
+### CWL tool Setup
 The official cwltool installation page can be found
 [here](https://github.com/common-workflow-language/cwltool/blob/master/README.rst).
 It is highly recommended to install cwltool in the virtual environment as it is
 indicated in the installation page.
+
+### Docker Setup
+The official Docker installation page can be found
+[here](https://docs.docker.com/install/#supported-platforms). Docker
+[documentation](https://docs.docker.com/) is a good source of information to
+familiarize yourself with containers.
 
 ### Setting up Credentials
 The hippocampal subfield CWL pipeline also requires credentials from the [Brain
