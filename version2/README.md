@@ -22,7 +22,8 @@ It is highly recommended to install cwltool in the virtual environment as it is
 indicated in the installation page.
 
 ### Docker Setup
-The official Docker installation page can be found
+This pipeline uses Docker to pull python and FreeSurfer image. The official
+Docker installation page can be found
 [here](https://docs.docker.com/install/#supported-platforms). Docker
 [documentation](https://docs.docker.com/) is a good source of information to
 familiarize yourself with containers.
