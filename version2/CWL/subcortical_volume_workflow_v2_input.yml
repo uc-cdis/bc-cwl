@@ -1,0 +1,9 @@
+c_file1:
+  class: File
+  path: credentials.json
+p_id1: mjff-training
+s_id1: [t1-image-01,t1-image-02]
+img_out_dir1: image_dir
+subcortical_volume_fileName: subcortical_volume.txt
+stat_file: summary_stat.txt
+outlier_file: outlier_basedOn_subcortical.txt
