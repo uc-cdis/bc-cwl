@@ -1,1 +1,1 @@
-Brain common tools and CWLs for pipelines
+Brain common CWL pipelines
