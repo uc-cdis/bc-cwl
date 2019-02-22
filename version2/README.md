@@ -12,8 +12,11 @@ pipeline configuration and setup scripts are stored in the CWL directory, you
 can copy them to your working directory.
 
 ## Dependencies
- - cwltool
- - Docker
+ - `cwltool`
+ - `Docker`
+
+## Recommended
+ - `tmux` or similar tool allowing session management
 
 ### CWL tool Setup
 The official cwltool installation page can be found
@@ -27,6 +30,15 @@ Docker installation page can be found
 [here](https://docs.docker.com/install/#supported-platforms). Docker
 [documentation](https://docs.docker.com/) is a good source of information to
 familiarize yourself with containers.
+
+### Session management with tmux
+It takes several hours to execute this pipeline so it is recommended to use a
+tool allowing to disconnect and connect to the server without interrupting the
+pipeline. `tmux` and `screen` are examples of tools that keep your session
+persistent. You can install tmux on Ubuntu with `sudo apt-get install tmux` and
+on Mac with `brew install tmux`. The [official tmux
+page](https://github.com/tmux/tmux/wiki) provides helpful links to guides to
+tmux.
 
 ### Setting up Credentials
 The hippocampal subfield CWL pipeline also requires credentials from the [Brain
@@ -51,15 +63,21 @@ Parameters for the pipeline are controlled using
  
 
 ### Start running Hippocampal subfield CWL pipeline
+
   1. Download all files in CWL folder to your working directory
+
   2. Download credentials.json file to your working directory (see [Setting up
 Credentials](#Setting-up-Credentials))
 
-  3. Activate your virtual environment with CWL installed: 
+  3. Start new session with command `tmux` or `tmux new -s
+  your_session_name`.
+
+  4. Activate your virtual environment with CWL installed:
   ``` 
   source your_venv_name/bin/activate
   ```
-  4. Run hippocampal subfield CWL pipeline: 
+
+  5. Run hippocampal subfield CWL pipeline:
   ```
   cwl-runner --debug hippo_sub_workflow_v2.cwl hippo_sub_workflow_v2_input.yml
   ```
