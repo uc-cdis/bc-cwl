@@ -1,10 +1,10 @@
-Hippocampal subfield CWL pipeline
+Brain analysis pipeline
 ===
 
-Hippocampal subfield CWL pipeline pulls human MRI scans from the [Brain
+Brain analysis pipeline pulls human MRI scans from the [Brain
 Commons](https://data.braincommons.org/), performs post-processing and
-calculations, and returns measures of the subfields of the human hippocampal
-formations.
+calculations, and returns measures of the subfields of the human brain regions.
+It allows to calculate hippocampal subfield volumes and subcortical volumes.
 
 ## Setup
 
@@ -48,7 +48,7 @@ tmux.
 
 ### Setting up Credentials
 
-The hippocampal subfield CWL pipeline also requires credentials from the [Brain
+The brain analysis pipeline also requires credentials from the [Brain
 Commons](https://data.braincommons.org/) in your working directory.  If you
 already have a `credentials.json` file from the [Brain
 Commons](https://data.braincommons.org/), just copy it to your working
@@ -60,7 +60,8 @@ it in your working directory.
 
 ## Configuration
 
-Parameters for the pipeline are controlled using
+Parameters for the pipeline are controlled using *.yml files. Below you'll find
+a description of parameters for hippocampal analysis in the
 `hippo_sub_workflow_v2_input.yml`:
 
   - `c_file1` - the path to your credentials file
@@ -73,6 +74,9 @@ Parameters for the pipeline are controlled using
 
   - `hippo_sub_volume_fileName` - the filename of the output file containing
    volumes of the subfields of the hippocampal formations
+
+Analogous parameters can be configured for subcortical workflow in the
+`subcortical_volume_workflow_v2_input.yml`.
 
 ## Start running Hippocampal subfield CWL pipeline
 
@@ -89,7 +93,13 @@ Credentials](#Setting-up-Credentials))
     source your_venv_name/bin/activate
     ```
 
-5. Run hippocampal subfield CWL pipeline:
+5. To run the hippocampal subfield CWL workflow:
     ```
     cwl-runner --debug hippo_sub_workflow_v2.cwl hippo_sub_workflow_v2_input.yml
     ```
+
+   To run the subcortical volume workflow:
+    ```
+    cwl-runner --debug subcortical_volume_workflow_v2.cwl subcortical_volume_workflow_v2_input.yml
+    ```
+
