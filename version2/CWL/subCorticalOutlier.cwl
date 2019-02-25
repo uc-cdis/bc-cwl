@@ -7,7 +7,7 @@ doc: |
   
 requirements:
   - class: DockerRequirement
-    dockerImageId: brainlife/freesurferhipposub
+    dockerPull: "quay.io/cdis/freesurferhipposub"
   - class: InlineJavascriptRequirement
 
 
