@@ -3,7 +3,7 @@
 Brain analysis pipeline pulls human MRI scans from the [Brain
 Commons](https://data.braincommons.org/), performs post-processing and
 calculations, and returns measures of the subfields of the human brain regions.
-It allows to calculate hippocampal subfield volumes and subcortical volumes.
+It allows calculating hippocampal subfield volumes and subcortical volumes.
 
 ## Setup
 
