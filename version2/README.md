@@ -78,7 +78,7 @@ a description of parameters for hippocampal analysis in the
 Analogous parameters can be configured for subcortical workflow in the
 `subcortical_volume_workflow_v2_input.yml`.
 
-## Start running Hippocampal subfield CWL pipeline
+## Start running Brain analysis pipeline
 
 1. Download all files in CWL folder to your working directory
 
@@ -89,17 +89,20 @@ Credentials](#Setting-up-Credentials))
   your_session_name`
 
 4. Activate your virtual environment with CWL installed:
-    ```
+
+    ```bash
     source your_venv_name/bin/activate
     ```
 
 5. To run the hippocampal subfield CWL workflow:
-    ```
+
+    ```bash
     cwl-runner --debug hippo_sub_workflow_v2.cwl hippo_sub_workflow_v2_input.yml
     ```
 
    To run the subcortical volume workflow:
-    ```
+
+    ```bash
     cwl-runner --debug subcortical_volume_workflow_v2.cwl subcortical_volume_workflow_v2_input.yml
     ```
 
