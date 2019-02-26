@@ -1,5 +1,4 @@
-Brain analysis pipeline
-===
+# Brain analysis pipeline
 
 Brain analysis pipeline pulls human MRI scans from the [Brain
 Commons](https://data.braincommons.org/), performs post-processing and
